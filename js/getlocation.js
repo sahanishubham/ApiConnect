@@ -7,7 +7,7 @@ function initGeolocation()
    }
    else
    {
-      alert("Sorry, your browser does not support geolocation services.");
+      alert("Sorry, your browser does not support geolocation services. Open in Other browser !");
    }
 }
 function success(position)
