@@ -48,6 +48,7 @@ function success(position)
               document.getElementById("myImg").src = "img/man/good.png";
               document.getElementById("inf").style.borderColor = "black";
               document.getElementById("LocationName").style.color = "black";
+              document.getElementById("cityName").style.color = "black";
               document.getElementById("env").style.background = "black";
                 document.getElementById("env").style.background = "black";
                 document.getElementById("aqi").style.color= "black";
@@ -58,12 +59,13 @@ function success(position)
             {
               document.getElementById("env").innerHTML = "Moderate";
               document.getElementById("myImg").src = "img/man/Moderate.png";
-              document.getElementById("inf").style.borderColor = "black";
-              document.getElementById("LocationName").style.color = "black";
-              document.getElementById("env").style.background = "black";
-                document.getElementById("env").style.background = "black";
-                document.getElementById("aqi").style.color= "black";
-                document.getElementById("aqi").style.borderColor = "black";
+              document.getElementById("inf").style.borderColor = "#dad444";
+              document.getElementById("LocationName").style.color = "#dad444";
+              document.getElementById("env").style.background = "#dad444";
+                document.getElementById("env").style.background = "#dad444";
+                document.getElementById("aqi").style.color= "#dad444";
+                document.getElementById("aqi").style.borderColor = "#dad444";
+                document.getElementById("cityName").style.color = "#dad444";
 
             }
             else if(aqi>100 && aqi<=150)
@@ -72,6 +74,7 @@ function success(position)
               document.getElementById("myImg").src = "img/man/unhealthyforgroups.png";
               document.getElementById("inf").style.borderColor = "#e45833";
               document.getElementById("LocationName").style.color = "#e45833";
+              document.getElementById("cityName").style.color = "black";
               document.getElementById("env").style.background = "#e45833";
                 document.getElementById("env").style.background = "#e45833";
                 document.getElementById("aqi").style.color= "#e45833";
@@ -83,8 +86,9 @@ function success(position)
             {
               document.getElementById("env").innerHTML = "Unhealthy";
               document.getElementById("myImg").src = "img/man/unhealthy.png";
-              document.getElementById("inf").style.borderColor = "black";
               document.getElementById("LocationName").style.color = "black";
+              document.getElementById("inf").style.borderColor = "black";
+              document.getElementById("cityName").style.color = "black";
               document.getElementById("env").style.background = "black";
                 document.getElementById("env").style.background = "black";
                 document.getElementById("aqi").style.color= "black";
@@ -96,6 +100,7 @@ function success(position)
               document.getElementById("myImg").src = "img/man/veryunhealthy.png";
               document.getElementById("inf").style.borderColor = "black";
               document.getElementById("LocationName").style.color = "black";
+              document.getElementById("cityName").style.color = "black";
               document.getElementById("env").style.background = "black";
               document.getElementById("env").style.background = "black";
               document.getElementById("aqi").style.color= "black";
@@ -105,8 +110,9 @@ function success(position)
             {
               document.getElementById("env").innerHTML = "Hazardous";
               document.getElementById("myImg").src = "img/man/hazardous.png";
-              document.getElementById("inf").style.borderColor = "black";
               document.getElementById("LocationName").style.color = "black";
+              document.getElementById("inf").style.borderColor = "black";
+              document.getElementById("cityName").style.color = "black";
               document.getElementById("env").style.background = "black";
               document.getElementById("env").style.background = "black";
 
