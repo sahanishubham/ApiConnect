@@ -17,8 +17,8 @@
   // login_function
   $('#login_btn').click(function () {
     var newtokenvalue=document.cookie;
-    var email=$('#email').val();
-    var pswd=$('#pswd').val();
+    var email=$('#email0').val();
+    var pswd=$('#pswd0').val();
 
     if(email!='' && pswd!='' )
     {
