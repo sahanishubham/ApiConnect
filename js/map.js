@@ -27,7 +27,7 @@ $.ajax({
 
     var marker, i;
 
-    for (i = 0; i<4; i++) {
+    for (i = 0; i<value.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(value[i]['lat'], value[i]['lon']),
         map: map

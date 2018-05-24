@@ -71,9 +71,9 @@
     }
   </style>
   </head>
-  <body onLoad="initGeolocation();">
+  <body onLoad="dlocation();">
     <!-- Top bar-->
-
+<!-- <body> -->
 
     <!-- navbar-->
     <header class="header">
@@ -147,7 +147,7 @@
                         </div>
 
                         <div class="col-md-6">
-                          <img src="img/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
+                          <img src="img/man/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
                         </div>
                       </div>
                     </div>
@@ -195,7 +195,7 @@
                       </div>
 
                     </div>
-                      <canvas id="barChart6"></canvas>
+                      <!-- <canvas id="barChart6"></canvas> -->
               </div>
             </ul>
             </li>
@@ -211,7 +211,7 @@
                         </div>
 
                         <div class="col-md-6">
-                          <img src="img/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
+                          <img src="img/man/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
                         </div>
                       </div>
                     </div>
@@ -259,7 +259,7 @@
                       </div>
 
                     </div>
-                      <canvas id="barChart3"></canvas>
+                      <!-- <canvas id="barChart3"></canvas> -->
               </div>
             </ul>
             </li>
@@ -275,7 +275,7 @@
                         </div>
 
                         <div class="col-md-6">
-                          <img src="img/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
+                          <img src="img/man/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
                         </div>
                       </div>
                     </div>
@@ -323,7 +323,7 @@
                       </div>
 
                     </div>
-                      <canvas id="barChart4"></canvas>
+                      <!-- <canvas id="barChart4"></canvas> -->
               </div>
             </ul>
             </li>
@@ -339,7 +339,7 @@
                         </div>
 
                         <div class="col-md-6">
-                          <img src="img/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
+                          <img src="img/man/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
                         </div>
                       </div>
                     </div>
@@ -387,7 +387,7 @@
                       </div>
 
                     </div>
-                      <canvas id="barChart5"></canvas>
+                      <!-- <canvas id="barChart5"></canvas> -->
               </div>
             </ul>
             </li>
@@ -403,7 +403,7 @@
                         </div>
 
                         <div class="col-md-6">
-                          <img src="img/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
+                          <img src="img/man/good.png" alt="AQI-INDIA" class="img-responsive" style="max-height:105px;">
                         </div>
                       </div>
                     </div>
@@ -451,7 +451,7 @@
                       </div>
 
                     </div>
-                      <canvas id="barChart7"></canvas>
+                      <!-- <canvas id="barChart7"></canvas> -->
               </div>
             </ul>
             </li>
@@ -533,11 +533,11 @@
             <div class="row" style="font-size: 4px;">
               <div class="col-md-9">
                 <br>
-                <h2 class="chrome" id="LocationName">....</h2>
+                <h2 class="chrome" id="LocationName"> <img src="img/lo.gif" alt="" height="35px" width="40px"> </h2>
                 <div>
-                  <h6 id="cityName">.....</h6>
+                  <h6 id="cityName"><img src="img/lo.gif" alt="" height="35px" width="40px"> </h6>
                 </div>
-                <p><span class="locationaqienviroment" id="env">........</span> <span class="locationaqi" style="color:#4d7ac2;padding: 12px 2px;" id="aqi"> .. </span> </p>
+                <p><span class="locationaqienviroment" id="env"><img src="img/lo.gif" alt="" height="35px" width="40px"> </span> <span class="locationaqi" style="color:#4d7ac2;padding: 12px 2px;" id="aqi"> <img src="img/lo.gif" alt="" height="35px" width="40px"> </span> </p>
               </div>
 
               <div class="col-md-3">
@@ -579,20 +579,32 @@
 
               <div class="col-md-3">
                 <img src="img/smoke.png" alt="">
-                <p> <span class="info_data_back"style="background-color:#ec7551;">PM</span>  <br> <p id="PM25"></p> </p>
+                <p> <span class="info_data_back"style="background-color:#ec7551;">PM</span>  <br> <p id="PM25"><img src="img/lo.gif" alt="" height="25px" width="30px"> </p> </p>
+              </div>
+
+              <div class="col-md-3">
+                <img src="img/smoke.png" alt="">
+                <p><span class="info_data_back"style="background-color:#8bc34a;">PM 1</span> <br> <p id="PM1"><img src="img/lo.gif" alt="" height="25px" width="30px"></p></p>
+              </div>
+
+              <div class="col-md-3">
+                <img src="img/smoke.png" alt="">
+                <p><span class="info_data_back"style="background-color:#f8c36c;">PM 10</span> <br> <p id="PM10"><img src="img/lo.gif" alt="" height="25px" width="30px"></p></p>
               </div>
 
               <div class="col-md-3">
                 <img src="img/temprature.png" alt="">
-                <p><span class="info_data_back"style="background-color:#42abe1;">Temp</span>  <br>23<sup>o</sup>C </p>
+                <p><span class="info_data_back"style="background-color:#42abe1;">Temp</span>  <br><p id="Temp"><img src="img/lo.gif" alt="" height="25px" width="30px"></p></p>
               </div>
 
               <div class="col-md-3">
                 <img src="img/drop.png" alt="">
-                <p><span class="info_data_back"style="background-color:#eb4fa0;">Humidity</span> <br> 45%</p>
+                <p><span class="info_data_back"style="background-color:#eb4fa0;">Humid.</span> <br> <p id="Hum"><img src="img/lo.gif" alt="" height="25px" width="30px"></p></p>
               </div>
 
-              <div class="col-md-3">
+
+
+              <!-- <div class="col-md-3">
                 <img src="img/sound.png" alt="">
                 <p><span class="info_data_back"style="background-color:#616161;">Noise</span> <br>25 dB </p>
               </div>
@@ -615,7 +627,7 @@
               <div class="col-md-3">
                 <img src="img/cloud.png" alt="">
                 <p><span class="info_data_back"style="background-color:#ffc36d;">CO<sub>2</sub></span><br>11 </p>
-              </div>
+              </div> -->
 
 
 
@@ -624,10 +636,10 @@
             <!-- <hr> -->
               <div class="row">
                 <div class="col-md-6">
-                  <h6>Last Update</h6>
+                  <h6><p id="ti"></p></h6>
                 </div>
                 <div class="col-md-6">
-                  <h6>17 Feb,4 PM</h6>
+                  <h6> <p id="times"></p> </h6>
                 </div>
               </div>
           </div>
@@ -812,7 +824,7 @@
           <div class="col-lg-3 col-md-6"><a href="#" class="brand">AQI-INDIA</a>
             <ul class="contact-info list-unstyled">
               <li><a href="mailto:aqi.in.com">Aqi.in</a></li>
-              <li><a href="tel:123456789">+00 193 496 789</a></li>
+              <li><a href="tel:123456789">+00 123 456 789</a></li>
             </ul>
             <ul class="social-icons list-inline">
               <li class="list-inline-item"><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
@@ -870,15 +882,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
     <script src="js/api_auth.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="js/front.js"></script>
+    <!-- <script src="vendor/jquery.cookie/jquery.cookie.js"> </script> -->
+    <!-- <script src="vendor/owl.carousel/owl.carousel.min.js"></script> -->
+    <!-- <script src="js/front.js"></script> -->
     <script src="chart.js/Chart.min.js"></script>
-    <script src="js/charts-home.js"></script>
-    <script src="js/charts-custom.js"></script>
+    <!-- <script src="js/charts-home.js"></script> -->
+    <!-- <script src="js/charts-custom.js"></script> -->
   <script src="js/custom.js"></script>
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyBcb8twJqzWNDvZEtZeNvp4TaMoAjo0ksQ"type="text/javascript"></script>
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyBcb8twJqzWNDvZEtZeNvp4TaMoAjo0ksQ"type="text/javascript"></script>
   <script src="js/map.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/getlocation.js"></script>
   </body>
 </html>
