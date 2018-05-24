@@ -1,5 +1,5 @@
-
-function dlocation() {
+function dlocation()
+{
 
   var lat ="28.704059";
   var long ="77.102490";
@@ -118,8 +118,7 @@ function dlocation() {
         }
       }
     });
-
-  }
+}
 
 // function initGeolocation()
 // {
