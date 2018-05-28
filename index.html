@@ -35,6 +35,10 @@
       max-height: 162px;
     }
 
+    button:focus{
+      outline:none;
+    }
+
     #barChart6{
         max-width: 300px;
         max-height: 140px;
@@ -143,6 +147,22 @@
         }
       }
   </style>
+  <!-- <script>
+  	var recognition = new webkitSpeechRecognition();
+  	recognition.continuous = true;
+  	//recognition.interimResults = true;
+  	function start(){
+  		recognition.onresult = function(event) {
+  			// console.log(event);
+  			var output = document.getElementById("output");
+  			output.innerHTML = "";
+  			for(var i=0; i<event.results.length; i++){
+  				output.innerHTML = output.innerHTML + event.results[i][0].transcript;
+  			}
+  		}
+  		recognition.start();
+  	}
+  </script> -->
   </head>
   <body onLoad="dlocation();">
     <!-- Top bar-->
@@ -155,10 +175,13 @@
         &nbsp;
        <form class="navbar-form navbar-left col-md-3" action="index.html">
          <div class="input-group" style="box-shadow: 0 10px 20px rgba(109, 109, 109, 0.16) !important;">
-           <input type="text" class="form-control city-input-box " placeholder=" Check Any City AQI !">
+           <input type="text" class="form-control city-input-box " placeholder=" Check Any City AQI !" style="height: 45px;">
+           <!-- <div id ="output" style="padding-top:10px;border: 1px solid #528fe4;"></div> -->
+           <!-- <button style="border-left: none;padding: 0px 15px;font-size: 24px;color: #538fe4;"id = "bStart" type="button" value = "Start" onclick = "start();" name="button"><i class="fa fa-microphone"></i></button> -->
            <input type="submit" name="Search" class="city-search-btn" value="Check">
          </div>
        </form>
+
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span></span><span></span><span></span></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">
@@ -206,7 +229,11 @@
       <div class="container">
         <div class="row d-flex align-items-center">
           <div class="col-md-3 d-md-block d-none">
-            <!-- <a href="#" >Mon 16 Apr, 2 <span class="deadornot ">:</span> 43 <span class="deadornot ">: 51 </span> PM</a> -->
+          <script>
+          var d = new Date();
+          document.getElementById("ddemo").innerHTML = d.toDateString();
+          </script>
+            <a  style="color:#4f9be3;"href="#"><span id="ddemo" class="deadornot "></span></a>
           </div>
           <div class="col-md-offset-3 d-flex center" >
             <li class="dropdown">
@@ -592,7 +619,11 @@
 
         <div id="map" style="width:100%;height:700px;"></div>
         <div style="position:relative;top: -465px;max-width:240px;color:white;font-size: 12px;margin-bottom: -425px;" class="col-md-offset-4 col-md-4 animated bounceInRight">
-          <a href="#" style="color:white;" > <span style="background: #5390e3;color:white;border-radius: 5px;padding: 1px 5px;">Mon 16 Apr</span>  <br><span style="font-size: 30px;color: #558de4;border-radius: 5px;padding: 0px 5px;"> 2 <span class="deadornot ">:</span> 43 <span class="deadornot ">: 51 </span> PM </span></a> <br>
+        <script>
+        var d = new Date();
+        document.getElementById("ddemo").innerHTML = d.toDateString();
+        </script>
+          <a href="#" style="color:white;" > <span style="visibility: hidden;background: #5390e3;color:white;border-radius: 5px;padding: 1px 5px;">Mon 16 Apr</span>  <br><span style="visibility: hidden;font-size: 30px;color: #558de4;border-radius: 5px;padding: 0px 5px;"> 2 <span class="deadornot ">:</span> 43 <span class="deadornot ">: 51 </span> PM </span></a> <br>
           <span style="background-color:#8bc34a;box-shadow:0 10px 20px rgba(109, 109, 109, 0.16) !important;margin:5px;padding:7px;border-radius:5px;">Good (0-50)</span><br>
           <span style="background-color:#ec7451;box-shadow:0 10px 20px rgba(109, 109, 109, 0.16) !important;margin:5px;padding:7px;border-radius:5px;">Moderate (51-100)</span><br>
           <span style="background-color:#ee524f;box-shadow:0 10px 20px rgba(109, 109, 109, 0.16) !important;margin:5px;padding:7px;border-radius:5px;">Unhealthy for Groups (101-150)</span><br>
@@ -606,9 +637,12 @@
             <div class="row" style="font-size: 4px;">
               <div class="col-md-9">
                 <br>
-                <h2 class="chrome" id="LocationName"> <img src="img/lo.gif" alt="" height="35px" width="40px"> </h2>
+                <!-- <h2 class="chrome" id="LocationName"> <img src="img/lo.gif" alt="" height="35px" width="40px"> </h2> -->
+                <h4 class="chrome"> Seven Sea Hotel</h4>
                 <div>
-                  <h6 id="cityName"><img src="img/lo.gif" alt="" height="35px" width="40px"> </h6>
+                  <!-- <h6 id="cityName"><img src="img/lo.gif" alt="" height="35px" width="40px"> </h6> -->
+                  <h6 id="cityName">Delhi</h6>
+
                 </div>
                 <p><span class="locationaqienviroment" id="env"><img src="img/lo.gif" alt="" height="35px" width="40px"> </span> <span class="locationaqi" style="color:#4d7ac2;padding: 12px 2px;" id="aqi"> <img src="img/lo.gif" alt="" height="35px" width="40px"> </span> </p>
               </div>
@@ -1020,9 +1054,9 @@
     <!-- <script src="vendor/jquery.cookie/jquery.cookie.js"> </script> -->
     <!-- <script src="vendor/owl.carousel/owl.carousel.min.js"></script> -->
     <!-- <script src="js/front.js"></script> -->
-    <script src="chart.js/Chart.min.js"></script>
-    <script src="js/charts-home.js"></script>
-    <script src="js/charts-custom.js"></script>
+    <!-- <script src="chart.js/Chart.min.js"></script> -->
+    <!-- <script src="js/charts-home.js"></script> -->
+    <!-- <script src="js/charts-custom.js"></script> -->
   <script src="js/custom.js"></script>
   <script src="https://maps.google.com/maps/api/js?key=AIzaSyBcb8twJqzWNDvZEtZeNvp4TaMoAjo0ksQ"type="text/javascript"></script>
   <script src="js/map.js"></script>

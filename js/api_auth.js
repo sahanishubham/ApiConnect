@@ -12,7 +12,6 @@ url:"http://aqi.in/Auth/oauth2/token",
 data:data,
 success:function(data){
   document.cookie=data['access_token'];
-
 },
 error:function()
   {
